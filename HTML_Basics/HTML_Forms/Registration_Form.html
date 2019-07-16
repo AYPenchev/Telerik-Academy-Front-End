@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en" xml:lang="en">
+
+<head>
+    <title>HTML 5 Form Validation</title>
+    <style>
+        .registrationTable td {
+            border: 0.5px solid gray;
+            padding-left: 5px;
+            padding-right: 5px;
+            padding-top: 5px;
+            padding-bottom: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <form method="get">
+        <table class="registrationTable" cellspacing="0">
+            <tfoot>
+                <tr>
+                    <td colspan="4" style="background: rgb(186, 223, 186)" align="center">
+                        <input type="submit" src="https://github.com/AYPenchev" />
+                        <input type="reset" value="Clear This Form" />
+                    </td>
+                </tr>
+            </tfoot>
+            <tbody>
+                <tr>
+                    <td align="right">
+                        <label for="lastNameInput"><b>Last Name</b></label>
+                    </td>
+                    <td colspan="3">
+                        <input id="lastNameInput" type="name" required="true" pattern="\+[a-zA-Z]{2,0}" placeholder="Petrov" style="width: 90%" />
+                    </td>
+                </tr>
+                <tr>
+                    <td align="right">
+                        <label for="firstNameInput"><b>First Name</b></label>
+                    </td>
+                    <td colspan="3">
+                        <input id="firstNameInput" type="name" required="true" pattern="\+[a-zA-Z]{2,0}" placeholder="Ivan" style="width: 90%" />
+                    </td>
+                </tr>
+                <tr>
+                    <td align="right">
+                        <label for="AddressInput"><b>Address</b></label>
+                    </td>
+                    <td colspan="3">
+                        <textarea id="AddressInput" type="address" required="true" placeholder="Your address here!" style="width: 85%"></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="right">
+                        <label for="CityInput"><b>City</b></label>
+                    </td>
+                    <td>
+                        <input id="CityInput" type="city" required="true" placeholder="Ruse" style="width: 95%" />
+                    </td>
+                    <td align="center">
+                        <label for="StateInput"><b>State</b></label>
+                    </td>
+                    <td>
+                        <input id="StateInput" type="state" required="false" placeholder="state" style="width: 95%" />
+                    </td>
+                </tr>
+                <tr>
+                    <td align="right">
+                        <label for="ZipCodeInput"><b>Zip/Postal Code</b></label>
+                    </td>
+                    <td colspan="3">
+                        <input id="ZipCodeInput" type="zipCode" required="true" placeholder="Code" style="width: 30%" />
+                    </td>
+                </tr>
+                <tr>
+                    <td align="right">
+                        <label for="CountryInput"><b>Country</b></label>
+                    </td>
+                    <td colspan="3">
+                        <select name="Country" id="CountryInput" style="width: 60%">
+                        <option value="Sweden">Sweden</option>
+                        <option selected="selected" value="Bulgaria">Bulgaria</option>
+                        <option value="Greece">Greece</option>
+                    </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="right">
+                        <label><b>Phone (country code, area code, number)</b></label>
+                    </td>
+                    <td colspan="3">
+                        (+<input required="true" placeholder="359" style="width: 20%" /> )
+                        <input required="true" placeholder="88" style="width: 20%" /> -
+                        <input required="true" placeholder="8334343" style="width: 30%" />
+                    </td>
+                </tr>
+                <tr>
+                    <td align="right">
+                        <label for="emailInput"><b>E-mail</b></label>
+                    </td>
+                    <td colspan="3">
+                        <input id="emailInput" type="email" required="true" pattern="[a-zA-Z0-9_]{3,}@[a-zA-Z0-9_]{3,}.[a-zA-Z0-9_]{2,4}" placeholder="sample@email.com" style="width: 90%" />
+                    </td>
+                </tr>
+                <tr>
+                    <td align="right">
+                        <label><b>Birth date</b></label>
+                    </td>
+                    <td colspan="3">
+                        Month <input required="true" placeholder="06" style="width: 10%" /> Day <input required="true" placeholder="14" style="width: 10%" /> Year (4 digit) <input required="true" placeholder="1980" style="width: 15%" />
+                    </td>
+                </tr>
+                <tr>
+                    <td align="right">
+                        <label for="GenderInput"><b>Gender</b></label>
+                    </td>
+                    <td colspan="3">
+                        <select name="Gender" id="GenderInput">
+                        <option value="Male">Male</option>
+                        <option selected="selected" value="Female">Female</option>
+                        <option value="Other">Other</option>
+                    </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="right">
+                        <label><b>Starting date</b></label>
+                    </td>
+                    <td colspan="3">
+                        <input id="spring" type="radio" name="date" value="spring 2006" />
+                        <label for="spring">Spring 2006</label>
+                        <input id="summer" type="radio" name="date" value="summer 2006" />
+                        <label for="summer">Summer 2006</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="right">
+                        <label for="CommentsQuestionsInput"><b>Comments/Questions</b></label>
+                    </td>
+                    <td colspan="3">
+                        <textarea id="CommentsQuestionsInput" placeholder="Comments/Questions" style="width: 90%"></textarea>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </form>
+</body>
+
+</html>
