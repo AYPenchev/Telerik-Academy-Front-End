@@ -1,0 +1,38 @@
+html.global {
+    background: #A9A9A9;
+}
+
+h1.beigeText {
+    color: beige;
+}
+
+header {
+    text-align: center;
+}
+
+ul {
+    list-style-type: none;
+}
+
+ul li a {
+    font-size: 36px;
+    color: white;
+}
+
+a.clearWhite,
+a.backgroundWhite {
+    text-decoration: none;
+}
+
+a.backgroundWhite {
+    background-color: #D3D3D3;
+}
+
+footer.globalFooter {
+    text-align: center;
+}
+
+section article header h1.beigeText {
+    font-size: 36px;
+    text-align: left;
+}
