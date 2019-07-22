@@ -1,0 +1,50 @@
+td.noneBorder,
+th.noneBorder {
+    border-right: none !important;
+}
+
+td,
+th {
+    border-right: 1px ridge rgb(170, 170, 120);
+}
+
+tr.headRow {
+    color: white;
+    background-color: green !important;
+    text-align: left;
+}
+
+tr:nth-child(2n+1) {
+    background-color: whitesmoke;
+}
+
+tr:nth-child(2n) {
+    background-color: beige;
+}
+
+td.Germany:before {
+    background-image: url("https://upload.wikimedia.org/wikipedia/en/thumb/b/ba/Flag_of_Germany.svg/1280px-Flag_of_Germany.svg.png");
+    background-size: 15px 10px;
+    display: inline-block;
+    width: 15px;
+    height: 10px;
+    content: "";
+}
+
+td.Mexico:before {
+    background-image: url("https://cdn10.bigcommerce.com/s-ey7tq/products/3423/images/4746/FIMEX-2__35927.1407858960.1280.1280.jpg?c=2");
+    background-size: 15px 10px;
+    display: inline-block;
+    width: 15px;
+    height: 10px;
+    content: "";
+}
+
+td.UK:before {
+    background-image: url("https://images-na.ssl-images-amazon.com/images/I/612-eO6gP3L._SX425_.jpg");
+    background-size: 15px 10px;
+    display: inline-block;
+    width: 15px;
+    height: 10px;
+    content: "";
+}
