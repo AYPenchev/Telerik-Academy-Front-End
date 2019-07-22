@@ -1,0 +1,39 @@
+table.TicketTable {
+    background: #898989;
+}
+
+td.firstColumn {
+    color: white;
+    font-style: italic;
+}
+
+th.greyText,
+td.greyText {
+    color: rgb(197, 197, 197);
+    text-align: left;
+}
+
+td.yellowText {
+    color: rgb(245, 245, 88);
+}
+
+td.yellowTextGreenDot {
+    color: rgb(245, 245, 88);
+}
+
+td.yellowTextGreenDot:before {
+    background-image: url("https://eyotdofe.files.wordpress.com/2016/09/green-dot.png");
+    background-size: 10px 10px;
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    content: "";
+}
+
+td.redText {
+    color: red;
+}
+
+td.orangeText {
+    color: orange;
+}
