@@ -1,0 +1,49 @@
+.FirstLetterUnderline::first-letter {
+    text-decoration: underline;
+}
+
+.leafTable {
+    border-radius: 2px;
+}
+
+.leafTable td {
+    border: none !important;
+}
+
+.outerTable,
+.innerTable,
+.leafTable {
+    background-color: #E3ECF7;
+    border: 1px solid black;
+}
+
+.outerTable {
+    background-color: rgb(194, 198, 206) !important;
+    text-align: left;
+    width: 302px !important;
+}
+
+.innerTable td {
+    border: 1px solid black;
+}
+
+body table thead tr th {
+    width: 50px !important;
+}
+
+#result {
+    text-align: right;
+    font-size: 20px;
+    width: 285px;
+    height: 30px;
+    background: linear-gradient(to bottom, rgba(223, 245, 251, 1) 0%, rgba(255, 255, 255, 1) 100%);
+    border-radius: 2px;
+}
+
+.grey {
+    color: grey;
+}
+
+.darkblue {
+    color: #596E9B;
+}
