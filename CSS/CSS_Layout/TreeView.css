@@ -1,0 +1,52 @@
+body nav {
+    display: inline-block;
+    width: 75%;
+    margin: 20px 20px 20px 20px;
+    padding: 12px;
+    background-color: white;
+}
+
+body nav ul.nav-list {
+    list-style-type: none;
+}
+
+body nav ul li a {
+    text-decoration: none;
+    padding: 0 10px 0 10px;
+    color: black;
+    font: 1.4em normal Arial;
+}
+
+body nav ul li a.selected {
+    font-weight: bold;
+}
+
+body nav ul li:hover>a {
+    text-decoration: underline;
+    color: #a8a8a8;
+}
+
+body nav ul li:hover>a+ul {
+    display: block;
+}
+
+body nav ul li ul.sub-nav-list {
+    position: relative;
+    display: none;
+    background-color: white;
+}
+
+body nav ul li ul li {
+    float: none;
+    margin: 0 15px;
+    padding: 10px 0;
+}
+
+body nav ul li ul li:last-of-type {
+    border-bottom: none;
+}
+
+body nav ul li ul li>a {
+    font-size: 1.2em;
+    color: black;
+}
