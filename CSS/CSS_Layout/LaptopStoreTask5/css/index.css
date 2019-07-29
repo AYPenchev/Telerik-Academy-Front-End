@@ -1,0 +1,42 @@
+.main-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  color: #0084ff;
+  text-decoration: underline;
+  font-size: 40px;
+}
+
+.section-border {
+  float: left;
+  border: 1px black solid;
+  width: 67%;
+}
+
+.two-horizontal-fieldsets {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.two-sides-of-fieldset {
+  display: inline-block;
+  width: 46%;
+}
+
+#right {
+  float: left;
+  padding-left: 10%;
+  padding-top: 15%;
+  font-size: 1.4em;
+}
+/*# sourceMappingURL=index.css.map */

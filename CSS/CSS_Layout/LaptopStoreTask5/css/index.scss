@@ -1,0 +1,31 @@
+.main-title {
+    display: flex;
+    justify-content: space-evenly;
+    color: rgb(0, 132, 255);
+    text-decoration: underline;
+    font-size: 40px;
+}
+
+.section-border {
+    float: left;
+    border: 1px black solid;
+    width: 67%;
+}
+
+.two-horizontal-fieldsets {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.two-sides-of-fieldset {
+    display: inline-block;
+    width: 46%;
+}
+
+#right {
+    float: left;
+    padding-left: 10%;
+    padding-top: 15%;
+    font-size: 1.4em;
+}
