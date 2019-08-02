@@ -1,5 +1,4 @@
-function NumbersFrom1ToN() {
-    //let n = window.prompt("Enter n:", "Number");
+function MMSA() {
     let sum = 0,
         min = Number.MAX_SAFE_INTEGER,
         max = Number.MIN_SAFE_INTEGER,
@@ -7,7 +6,7 @@ function NumbersFrom1ToN() {
         n = window.prompt('Enter n:', 'Number:');
 
     for (let i = 0; i < n; i++) {
-        let currentNum = parseFloat(Console.ReadLine());
+        let currentNum = parseFloat(window.prompt(`Enter number ${i+1}:`, 'Number:'));
         if (currentNum > max) {
             max = currentNum;
         }
@@ -18,10 +17,10 @@ function NumbersFrom1ToN() {
     }
     avg = sum / n;
 
-    Console.WriteLine("min = " + String.Format("{0:F2}", min));
-    Console.WriteLine("max = " + String.Format("{0:F2}", max));
-    Console.WriteLine("sum = " + String.Format("{0:F2}", sum));
-    Console.WriteLine("avg = " + String.Format("{0:F2}", avg));
+    console.log("min = " + min.toFixed(2));
+    console.log("max = " + max.toFixed(2));
+    console.log("sum = " + sum.toFixed(2));
+    console.log("avg = " + avg.toFixed(2));
 }
 
-NumbersFrom1ToN();
+MMSA();
