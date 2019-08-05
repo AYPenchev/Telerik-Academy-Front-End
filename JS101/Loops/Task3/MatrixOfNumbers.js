@@ -4,9 +4,9 @@ function MatrixOfNumbers() {
         rowArray = [];
     for (let i = 1; i <= n; i++) {
         for (let j = i; j <= k; j++) {
-            rowArray.push(`${j}` + ` `);
+            rowArray.push(j);
         }
-        console.log(rowArray);
+        console.log(rowArray.join(' '));
         rowArray = [];
         k++;
     }
