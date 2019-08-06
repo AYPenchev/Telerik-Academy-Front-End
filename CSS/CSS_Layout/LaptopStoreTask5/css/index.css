@@ -30,13 +30,30 @@
 
 .two-sides-of-fieldset {
   display: inline-block;
-  width: 46%;
+  width: 47%;
 }
 
 #right {
   float: left;
   padding-left: 10%;
-  padding-top: 15%;
+  padding-top: 5%;
   font-size: 1.4em;
+}
+
+.aside-align-pic {
+  display: inline-block;
+  width: 47%;
+}
+
+fieldset > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 /*# sourceMappingURL=index.css.map */
