@@ -1,7 +1,6 @@
 function LexCompare() {
     let firstCharArray = [],
-        secondCharArray = [],
-        isFirstArrayLexBigger = false;
+        secondCharArray = [];
 
     firstCharArray = window.prompt('Enter first char array:', 'Char array:');
     secondCharArray = window.prompt('Enter second char array:', 'Char array:');
@@ -14,6 +13,7 @@ function LexCompare() {
             return '<';
         }
     }
+
     if (firstCharArray.length === secondCharArray.length) {
         return '=';
     } else if (firstCharArray.length < secondCharArray.length) {
