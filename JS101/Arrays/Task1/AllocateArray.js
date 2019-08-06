@@ -1,9 +1,10 @@
 function AllocateArray() {
-    let n = window.prompt('Enter number of integers for the array', 'Number:');
-    allocateArray = [];
-    for (let i = 1; i < parseInt(n); i++) {
-        allocateArray[i - 1] = i;
+    let n = parseInt(window.prompt('Enter number of integers for the array', 'Number:'));
+    allocateArray = new Array(n);
+    for (let i = 0; i < n; i++) {
+        allocateArray[i] = i;
         console.log(allocateArray[i] * n);
     }
 }
+
 AllocateArray();
