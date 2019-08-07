@@ -1,6 +1,6 @@
 'use strict'
 
-function mainFunc() {
+function MainFunc() {
     let n = parseInt(window.prompt('Enter N number:')),
         permutationArray = [];
     for (let i = 0; i < n; i++) {
@@ -34,4 +34,4 @@ function SwapArr(arrayElementSwap, i, j) {
     return arrayElementSwap;
 }
 
-mainFunc();
+MainFunc();
