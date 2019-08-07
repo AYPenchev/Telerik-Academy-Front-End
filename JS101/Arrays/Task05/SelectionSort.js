@@ -1,4 +1,4 @@
-function selectionSort() {
+function SelectionSort() {
     let arrayToBeSorted = ['10', '36', '10', '1', '34', '28', '38', '31', '27', '30', '20'],
         currentMinNumber = Number.MAX_SAFE_INTEGER,
         currentMinNumberIndex = -1,
@@ -22,4 +22,4 @@ function selectionSort() {
     }
 }
 
-selectionSort();
+SelectionSort();
