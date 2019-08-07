@@ -1,6 +1,6 @@
 'use strict'
 
-function binarySearchMain() {
+function SubsetSum() {
     let arraySum = 0,
         startInx = null,
         endInx = null,
@@ -40,4 +40,4 @@ function binarySearchMain() {
     }
 }
 
-binarySearchMain();
+SubsetSum();
