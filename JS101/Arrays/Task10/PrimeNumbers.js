@@ -1,7 +1,7 @@
 'use strict'
 
 function PrimeNumber() {
-    let n = parseInt(window.prompt('Enter n: ')),
+    let n = parseInt(window.prompt('Enter n:')),
         prime = [];
 
     for (let i = 0; i < n + 1; i++) {
