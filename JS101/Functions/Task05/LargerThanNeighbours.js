@@ -1,3 +1,5 @@
+'use strict'
+
 function largerThanNeighbours() {
     let countLargerThanNeighbours = 0,
         largerThanNeighbourArray = [],
