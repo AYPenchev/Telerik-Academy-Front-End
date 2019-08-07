@@ -1,43 +1,34 @@
 'use strict'
 
-function SubsetSum() {
-    let arraySum = 0,
-        startInx = null,
-        endInx = null,
-        givenSum = parseInt(window.prompt("Enter Sum: ")),
-        findSumArrayLen = parseInt(window.prompt("Enter array size: ")),
-        findSumArray = [],
+function MainFunc() {
+    let subsetArray = [],
         newNumber,
-        sumElements = [];
+        subsetArrayLen = parseInt(window.prompt("Enter array size: ")),
+        sum = parseInt(window.prompt('Enter sum: '));
 
-    for (let i = 0; i < findSumArrayLen; i++) {
+    for (let i = 0; i < subsetArrayLen; i++) {
         newNumber = parseInt(window.prompt('Enter element', 'One number representing an element'));
-        findSumArray.push(newNumber);
+        subsetArray.push(newNumber);
     }
 
-    for (let i = 0; i < findSumArrayLen; i++) {
-        arraySum = 0;
+    console.log(SubsetWithSumS(subsetArray, sum, subsetArray.length) ? "Yes" : "No");
+}
 
-        for (let j = i; j < findSumArrayLen; j++) {
-            arraySum += findSumArray[j];
-            if (arraySum === givenSum) {
-                startInx = i;
-                endInx = j + 1;
-                i = findSumArrayLen;
-                break;
-            }
-        }
+function SubsetWithSumS(subsetArray, sum, counter) {
+    if (sum === 0) {
+        return true;
     }
 
-    if (startInx !== null && endInx !== null) {
-        for (let i = startInx; i < endInx; i++) {
-            sumElements.push(findSumArray[i]);
-        }
+    if (counter === 0 && sum !== 0) {
+        return false;
+    }
 
-        console.log(`Elements - ${sumElements.join('+')} Sum = ${givenSum} YES`);
+    if (subsetArray[counter - 1] > sum) {
+        return SubsetWithSumS(subsetArray, sum, counter - 1);
     } else {
-        console.log("Sum not found!");
+        return SubsetWithSumS(subsetArray, sum, counter - 1) ||
+            SubsetWithSumS(subsetArray, sum - subsetArray[counter - 1], counter - 1);
     }
 }
 
-SubsetSum();
+MainFunc();
