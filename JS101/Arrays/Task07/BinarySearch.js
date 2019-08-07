@@ -1,6 +1,6 @@
 'use strict'
 
-function binarySearchMain() {
+function BinarySearchMain() {
     let binarySearchArray = [],
         arrayLength = window.prompt('Enter number of elements in the array', 'One number representing the length of an array'),
         newNumber,
@@ -14,7 +14,7 @@ function binarySearchMain() {
 
     searchedNumber = window.prompt('Enter number which index should be found');
 
-    result = binarySearch(binarySearchArray, 0, binarySearchArray.length - 1, searchedNumber);
+    result = BinarySearch(binarySearchArray, 0, binarySearchArray.length - 1, searchedNumber);
 
     if (result === -1) {
         console.log("Element not present");
@@ -28,7 +28,7 @@ function binarySearchMain() {
     }
 }
 
-function binarySearch(arr, left, right, searchedNum) {
+function BinarySearch(arr, left, right, searchedNum) {
     if (right >= left) {
         let mid = Math.floor(left + (right - left) / 2);
 
@@ -37,11 +37,11 @@ function binarySearch(arr, left, right, searchedNum) {
         }
 
         if (arr[mid] > searchedNum) {
-            return binarySearch(arr, left, mid - 1, searchedNum);
+            return BinarySearch(arr, left, mid - 1, searchedNum);
         }
-        return binarySearch(arr, mid + 1, right, searchedNum);
+        return BinarySearch(arr, mid + 1, right, searchedNum);
     }
     return -1;
 }
 
-binarySearchMain();
+BinarySearchMain();
