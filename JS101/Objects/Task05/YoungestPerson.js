@@ -18,5 +18,4 @@ let people = [
     { firstname: 'John', lastname: 'Doe', age: 42 }
 ];
 
-
 console.log(findYoungestPerson(people));
