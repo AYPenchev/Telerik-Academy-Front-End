@@ -1,6 +1,6 @@
 'use strict'
 
-function FindSumInArray() {
+function findSumInArray() {
     let arraySum = 0,
         startInx = null,
         endInx = null,
@@ -40,4 +40,4 @@ function FindSumInArray() {
     }
 }
 
-FindSumInArray();
+findSumInArray();
