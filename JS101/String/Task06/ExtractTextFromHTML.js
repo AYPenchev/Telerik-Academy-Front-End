@@ -3,24 +3,24 @@
 function extractTextFromHTML() {
     let htmlCodeArray = [
             '<html>',
-            '  <head>',
-            '    <title>Sample site</title>',
-            '  </head>',
-            '  <body>',
-            '    <div>text',
-            '      <div>more text</div>',
-            '      and more...',
-            '    </div>',
-            '    in body',
-            '  </body>',
+            '<head>',
+            '<title>Sample site</title>',
+            '</head>',
+            '<body>',
+            '<div>text',
+            '<div>more text</div>',
+            'and more...',
+            '</div>',
+            'in body',
+            '</body>',
             '</html>'
         ],
         htmlCode = htmlCodeArray.join(' '),
-        extractedText;
+        extractedText = '';
 
     for (let i = 0; i < htmlCode.length; i++) {
         if (htmlCode[i] === '<') {
-            extractedText.concat(' ');
+            extractedText += ' ';
 
             while (htmlCode[i] !== '>') {
                 i++;
@@ -29,23 +29,32 @@ function extractTextFromHTML() {
             continue;
         }
 
-        extractedText.concat(htmlCode[i]);
+        extractedText += htmlCode[i];
     }
+    extractedText = extractedText.trim();
 
-    extractedText.split(' ');
+    let clearExtractedText = '';
 
-    console.log(`Title: ${extractedText[0]}`);
-
-    console.log('Text: ');
-    for (let i = 1; i < extractedText.length; i++) {
-        if (i != extractedText.length - 1) {
-            console.log(extractedText[i] + ' ');
-        } else {
-            console.log(extractedText[i]);
+    for (let i = 0; i < extractedText.length; i++) {
+        if (extractedText[i] !== ' ' || extractedText[i + 1] !== ' ') {
+            clearExtractedText += extractedText[i];
         }
     }
 
-    console.log();
+    clearExtractedText = clearExtractedText.split(' ');
+
+    console.log(`Title: ${clearExtractedText[0]}`);
+
+    let text = '';
+    for (let i = 1; i < clearExtractedText.length; i++) {
+        if (i != clearExtractedText.length - 1) {
+            text += clearExtractedText[i] + ' ';
+        } else {
+            text += clearExtractedText[i];
+        }
+    }
+
+    console.log(`Text: ${text}`);
 }
 
 extractTextFromHTML();
