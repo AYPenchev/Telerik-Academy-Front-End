@@ -13,7 +13,6 @@ function sum() {
 
     for (let number of arguments[0]) {
         number = parseInt(number);
-
         if (isNaN(number)) {
             throw 'Element is not convertible to Number!';
         }
