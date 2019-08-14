@@ -1,3 +1,5 @@
+'use strict';
+
 function solve() {
     let library = (function() {
         let books = [];
@@ -14,6 +16,16 @@ function solve() {
         }
 
         function addBook(book) {
+            categories.push({
+                bookCategoryID: book.categoryID = books.length,
+                bookCategory: bookCategory = book.category
+            });
+
+
+            if (book.title.length < 2 && book.title.length > 100 && book.category.length < 2 && book.category.length > 100) {
+                throw 'Book title and category name must be between 2 and 100 characters';
+            }
+
             let regexISBN = /^(?:ISBN(?:-1[03])?:? )?(?=[0-9X]{10}$|(?=(?:[0-9]+[- ]){3})[- 0-9X]{13}$|97[89][0-9]{10}$|(?=(?:[0-9]+[- ]){4})[- 0-9]{17}$)(?:97[89][- ]?)?[0-9]{1,5}[- ]?[0-9]+[- ]?[0-9]+[- ]?[0-9X]$/;
             if (!regexISBN.test(book.ISBN)) {
                 throw 'Not valid ISBN!';
@@ -37,8 +49,8 @@ function solve() {
 
         function listCategories() {
             return categories
-                .sort((a, b) => a['ISBN'].localeCompare(b['ISBN']))
-                .map(x => `${x.ISBN} - ${x.title} by ${x.author}, category ${x.category}`);
+                .sort((a, b) => b.bookCategoryID - a.bookCategoryID)
+                .map(x => `Category ${x.bookCategory} - Id ${x.bookCategoryID}`);
         }
 
         return {
