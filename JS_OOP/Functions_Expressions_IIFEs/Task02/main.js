@@ -16,7 +16,6 @@ function primeNumbersInRange() {
     }
 
     let prime = [];
-
     for (let i = startNumber; i < endNumber + 1; i++) {
         prime[i] = true;
     }
