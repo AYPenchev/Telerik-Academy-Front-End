@@ -9,7 +9,6 @@ function solve() {
             if (propertyToBeSortedBy !== 'author' && propertyToBeSortedBy !== 'category') {
                 propertyToBeSortedBy = 'ISBN';
             }
-
             return books
                 .sort((a, b) => a[propertyToBeSortedBy].localeCompare(b[propertyToBeSortedBy]))
                 .map(x => `${x.ISBN} - ${x.title} by ${x.author}, category ${x.category}`);
@@ -20,7 +19,6 @@ function solve() {
                 bookCategoryID: book.categoryID = books.length,
                 bookCategory: bookCategory = book.category
             });
-
 
             if (book.title.length < 2 && book.title.length > 100 && book.category.length < 2 && book.category.length > 100) {
                 throw 'Book title and category name must be between 2 and 100 characters';
@@ -72,31 +70,25 @@ let book1 = {
     author: author = 'Ivan Vazovb',
     category: category = 'comedy'
 };
-
 let book2 = {
     ISBN: ISBN = '978-5-16-148410-0',
     title: title = 'potterr',
     author: author = 'Ivan Vazov',
     category: category = 'aomedy'
 };
-
 let book3 = {
     ISBN: ISBN = '978-4-16-148410-0',
     title: title = 'pottert',
     author: author = 'Ivan Vazova',
     category: category = 'bomedy'
 };
-
-
-
 let library = solve();
+
 library.books.add(book1);
 library.books.add(book2);
 library.books.add(book3);
 
-
 console.log(library.books.list('ISBN'));
 console.log(library.books.list('category'));
 console.log(library.books.list('author'));
-
 console.log(library.categories.list());
