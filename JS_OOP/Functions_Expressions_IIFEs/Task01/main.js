@@ -2,7 +2,6 @@
 
 function sum() {
     let sum = 0;
-
     if (arguments[0] === undefined) {
         throw 'Parameter is not passed (undefined)!';
     }
