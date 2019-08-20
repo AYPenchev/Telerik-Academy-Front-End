@@ -206,7 +206,7 @@
 
         const arr = list5.toArray();
         console.log(arr); // [1, 2, 3, 4, 5, 6]
-        console.log(arr instanceof Array); // True
+        console.log(arr instanceof Array); // true
 
         const list6 = new LinkedList();
         list6.append(1, 2, 3, 4, 5, 8);
