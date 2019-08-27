@@ -1,10 +1,10 @@
 'use strict';
-var telerikAcademyCourseModule = (function () {
+var telerikAcademyCourseModule = (function() {
     var _courseTitle;
     var _presentations = [];
     var _setOfStudents = [];
     var _space = ' ';
-    var Student = /** @class */ (function () {
+    var Student = /** @class */ (function() {
         function Student(firstName, lastName) {
             if (firstName[0] === firstName[0].toLowerCase() || lastName[0] === lastName[0].toLowerCase()) {
                 throw "Names should start with an upper case letter!";
@@ -18,47 +18,47 @@ var telerikAcademyCourseModule = (function () {
             this._score = 0;
         }
         Object.defineProperty(Student.prototype, "firstName", {
-            get: function () {
+            get: function() {
                 return this._firstName;
             },
             enumerable: true,
             configurable: true
         });
         Object.defineProperty(Student.prototype, "lastName", {
-            get: function () {
+            get: function() {
                 return this._lastName;
             },
             enumerable: true,
             configurable: true
         });
         Object.defineProperty(Student.prototype, "id", {
-            get: function () {
+            get: function() {
                 return this._ID;
             },
             enumerable: true,
             configurable: true
         });
         Object.defineProperty(Student.prototype, "submittedHomeworks", {
-            get: function () {
+            get: function() {
                 return this._submittedHomeworks;
             },
             enumerable: true,
             configurable: true
         });
-        Student.prototype.setSubmittedHomeworks = function () {
+        Student.prototype.setSubmittedHomeworks = function() {
             this._submittedHomeworks += 1;
         };
         Object.defineProperty(Student.prototype, "score", {
-            get: function () {
+            get: function() {
                 return this._score;
             },
-            set: function (value) {
+            set: function(value) {
                 this._score = value;
             },
             enumerable: true,
             configurable: true
         });
-        Student.prototype._validateName = function (name) {
+        Student.prototype._validateName = function(name) {
             if (name.length > 1) {
                 for (var i = 1; i < name.length; i++) {
                     if (name[i] === name[i].toUpperCase()) {
@@ -69,6 +69,7 @@ var telerikAcademyCourseModule = (function () {
         };
         return Student;
     }());
+
     function submitHomework(studentID, homeworkID) {
         if (homeworkID < 1 && homeworkID > _presentations.length) {
             throw "ID is invalid";
@@ -80,22 +81,25 @@ var telerikAcademyCourseModule = (function () {
             }
         }
     }
+
     function getTopTenStudents() {
         var topTenStudentsScore = [];
         var lenStudents = _setOfStudents.length;
-        var _loop_1 = function (i) {
-            var currentTopScoreStudent = _setOfStudents.reduce(function (firstStudent, secondStudent) { return firstStudent.score > secondStudent.score ? firstStudent : secondStudent; });
+        var _loop_1 = function(i) {
+            var currentTopScoreStudent = _setOfStudents.reduce(function(firstStudent, secondStudent) { return firstStudent.score > secondStudent.score ? firstStudent : secondStudent; });
             topTenStudentsScore.push(currentTopScoreStudent);
-            _setOfStudents = _setOfStudents.filter(function (student) { return student.score !== currentTopScoreStudent.score; });
+            _setOfStudents = _setOfStudents.filter(function(student) { return student.score !== currentTopScoreStudent.score; });
         };
         for (var i = 0; i < 10 && lenStudents >= 10; i++) {
             _loop_1(i);
         }
         return topTenStudentsScore;
     }
+
     function randomIntFromInterval(min, max) {
         return Math.floor(Math.random() * (max - min + 1) + min);
     }
+
     function pushExamResults() {
         var arrayOfStudentsAsObject = [];
         var currentScoreUpdate;
@@ -112,6 +116,7 @@ var telerikAcademyCourseModule = (function () {
         }
         return arrayOfStudentsAsObject;
     }
+
     function getAllStudents() {
         var arrayOfStudentsAsObject = [];
         var student;
@@ -127,11 +132,13 @@ var telerikAcademyCourseModule = (function () {
         }
         return arrayOfStudentsAsObject;
     }
+
     function addStudent(firstName, lastName) {
         var newStudent = new Student(firstName, lastName);
         _setOfStudents.push(newStudent);
         return newStudent.id;
     }
+
     function init(_courseTitle) {
         var presentationTitles = [];
         for (var _i = 1; _i < arguments.length; _i++) {
@@ -165,7 +172,7 @@ var telerikAcademyCourseModule = (function () {
 }());
 telerikAcademyCourseModule.init('OOP', 'Classes', 'Inheritance', 'Mixins');
 console.log(telerikAcademyCourseModule._courseTitle);
-telerikAcademyCourseModule._presentations.forEach(function (presentation) { return console.log("Presentation title - " + presentation.presetationTitle + ", homework - " + presentation.homework + ", ID - " + presentation.homeworkID); });
+telerikAcademyCourseModule._presentations.forEach(function(presentation) { return console.log("Presentation title - " + presentation.presetationTitle + ", homework - " + presentation.homework + ", ID - " + presentation.homeworkID); });
 telerikAcademyCourseModule.addStudent('Ivan', 'Petrov');
 telerikAcademyCourseModule.addStudent('Gosho', 'Ivanov');
 telerikAcademyCourseModule.addStudent('Pesho', 'Georgiev');
@@ -185,7 +192,7 @@ telerikAcademyCourseModule.submitHomework(1, 2);
 telerikAcademyCourseModule.submitHomework(2, 1);
 telerikAcademyCourseModule.submitHomework(2, 2);
 var allStudents = telerikAcademyCourseModule.getAllStudents();
-allStudents.forEach(function (x) { return console.log(x.id); });
+allStudents.forEach(function(x) { return console.log(x.id); });
 for (var _i = 0, allStudents_1 = allStudents; _i < allStudents_1.length; _i++) {
     var student = allStudents_1[_i];
     console.log(student);
@@ -197,3 +204,4 @@ for (var _a = 0, allStudentsResult_1 = allStudentsResult; _a < allStudentsResult
 }
 var topTenStudents = telerikAcademyCourseModule.getTopTenStudents();
 console.log(topTenStudents);
+//# sourceMappingURL=ModulesAndPatterns.js.map
